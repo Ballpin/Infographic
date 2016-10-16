@@ -1,0 +1,100 @@
+@import '../bower_components/normalize-scss/normalize.css';
+@import '../bower_components/animate.css/animate.css';
+//@import '~normalize-sass/normalize';
+//@import '~animate.css/source/animate';
+
+html, body {
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: -moz-linear-gradient(45deg, rgba(245, 245, 245, 1) 0%, rgba(199, 199, 199, 1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(245, 245, 245, 1)), color-stop(100%, rgba(199, 199, 199, 1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(45deg, rgba(245, 245, 245, 1) 0%, rgba(199, 199, 199, 1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(45deg, rgba(245, 245, 245, 1) 0%, rgba(199, 199, 199, 1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(45deg, rgba(245, 245, 245, 1) 0%, rgba(199, 199, 199, 1) 100%); /* ie10+ */
+  background: linear-gradient(45deg, rgba(245, 245, 245, 1) 0%, rgba(199, 199, 199, 1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C7C7C7', endColorstr='#F5F5F5', GradientType=1); /* ie6-9 */
+
+  > .content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headline {
+    text-transform: uppercase;
+    color: #ff1d30;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+    margin-bottom: 0;
+  }
+  .line {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 10px;
+    background: #FFF;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.no-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  >li {
+    span {display: block;}
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff1d30;
+    text-align: right;
+    width: 250px;
+    border-bottom: 2px solid #ff1d30;
+  }
+}
+section.headline { display: none; }
+section.coke-info {
+  display: none;
+  align-items: center;
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 auto;
+    h1 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.3em;
+      color: #ff1d30;
+      width: 250px;
+      border-bottom: 2px solid #ff1d30;
+      span {display:block;}
+    }
+    p.info {
+      display:block;
+      max-width: 250px;
+    }
+  }
+
+  .withInfo {
+    max-height: 40px;
+    overflow: hidden;
+    transition: all 1s ease;
+    cursor: pointer;
+  }
+
+}
